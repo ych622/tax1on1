@@ -1,0 +1,1293 @@
+/*
+Theme Name: XCB
+Theme URI: http://xcodebox.com/
+Description: 简洁绿色主题。
+Author: xcb
+Author URI: http://xcodebox.com/
+Version: 1.0
+*/
+
+/***************** 3 Column Layout ******************/
+/*
+	fullwidth = width including both left and right side padding
+	width = width excluding left and right side padding padding
+	cc padding = centre column padding (combined left and right)
+
+	left fullwidth = 150px wide, 10px padding each side (20 total)
+	right fullwidth = 150px wide, 10px padding each side (20 total)
+	cc padding = 15px either side (30 total)
+*/
+body 
+{
+	min-width: 510px;         /* 580 2 x (LC fullwidth + CC padding) + RC fullwidth */
+	/* IE7 likes putting horizontal scrollbars when it doesn't need to, aaaaa! */
+	overflow-x: hidden;
+}
+
+#container 
+{
+	padding-left: 150px;      /* LC fullwidth */
+	padding-right: 180px;     /* RC fullwidth + CC padding */
+}
+
+#container .column 
+{
+	position: relative;
+	float: left;
+}
+
+#centrecontent 
+{
+	padding: 0px 15px;       /* CC padding */
+	width: 100%;
+}
+
+#leftsidebar
+{
+	width: 130px;             /* LC width */
+	padding: 0 10px 0px 10px;    /* LC padding */
+	right: 180px;             /* LC fullwidth + CC padding */
+	margin-left: -100%;
+}
+
+#rightsidebar
+{
+	width: 130px;             /* RC width */
+	padding: 0 10px;          /* RC padding */
+	margin-right: -100%;
+}
+
+#footer 
+{
+	clear: both;
+}
+
+/* Essential Layout (IE Fix) */
+* html #leftsidebar {
+	left: 150px;              /* RC fullwidth */
+}
+
+/* Essential Layout (IE7 Fix) */
+*+html #leftsidebar {
+	left: 150px;              /* RC fullwidth */
+}
+
+/********************** Global **********************/
+
+/* Structure */
+
+body 
+{
+	margin: 0;
+	padding: 0;
+}
+
+p 
+{
+	margin: 1.2em 0;
+}
+
+ol, ul 
+{
+	margin: 1.2em 0 1.2em 2em;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	margin: 0.5em 0;
+}
+
+blockquote 
+{
+	margin: 0 20px;
+	padding: 0 20px;
+}
+
+form, 
+img 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+/* Typography */
+
+body 
+{
+	font-size: 78%;
+	font-family: "Microsoft YaHei","微软雅黑","Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, sans-serif;
+}
+
+p 
+{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+ol, ul 
+{
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	font-family: "Microsoft YaHei","微软雅黑","Lucida Grande", Tahoma, Arial, sans-serif;
+}
+
+h1, h2 
+{
+	font-size: 1.4em;
+}
+
+h3 
+{
+	font-size: 1.3em;
+}
+
+h4 
+{
+	font-size: 1.2em;
+}
+
+a 
+{
+	text-decoration: none;
+}
+
+input, textarea, select 
+{
+	font-size: 1em;
+	font-family: "Microsoft YaHei","微软雅黑","Lucida Sans Unicode", Tahoma, Arial, sans-serif;
+}
+
+blockquote 
+{
+	font-size: 1em;
+}
+
+code 
+{
+	font-family: monospace;
+}
+
+.small 
+{
+	font-size: 1em;
+}
+
+/* Colour and borders */
+
+body 
+{
+	background: #E8E8CE;
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+	color: #9BBB38; 
+}
+
+a:link 
+{
+	color: #E58712;
+}
+
+a:visited 
+{
+	color: #B96F17;
+}
+
+a:hover, a:active 
+{
+	color: #9BBB38;
+}
+
+input, textarea, select 
+{
+	border: 1px solid #999;
+	background-color: #FAFAF0;
+	color: #3A291F;
+}
+
+blockquote 
+{
+	border-left: 4px solid #E8E8CE;
+}
+
+code 
+{
+	color: #666;
+}
+
+.small 
+{
+	color: #999;
+}
+
+/********************** Header **********************/
+
+/* Structure */
+#header 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.headernolist
+{
+	height: 75px;
+}
+
+#header p
+{
+	padding: 0px;
+	margin: 0 0 0 10px;	
+	height: 23px;
+}
+
+#header h1 
+{
+	padding: 0px;
+	margin: 0 0 0px 10px;	
+	height: 50px;	
+}
+
+#header ul
+{	
+	height: 30px;
+	width: 100%;
+	padding: 2px 0;	
+	margin: 0px;	
+}
+
+#header ul li
+{
+	padding: 0;	
+	margin: 0px;
+	display: inline;
+}
+
+#header ul li a
+{
+	padding: 0px 10px;
+	height: 30px;
+	display:block;
+	float:left;
+}
+
+/* Typography */
+
+#header h1 
+{
+	font-size: 3em;
+}
+#header h1 a 
+{
+	text-decoration: none;
+}
+
+#header ul
+{	
+	font-size: 14px;
+	text-align: left;
+	font-family: "Microsoft YaHei","微软雅黑",'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	line-height: 30px;
+}
+
+#header ul li a
+{
+	text-decoration: none;
+	line-height: 30px;
+}
+
+
+/* Colour and borders */
+#header 
+{
+	background-color: #FAFAF0;
+}
+
+.headernolist
+{
+	border-bottom: 10px solid #9BBB38;
+}
+
+#header h1 a 
+{
+	color: #80904F;
+}
+
+#header ul
+{
+	background-color: #9BBB38;
+	color: #F0F0F0;
+}
+
+#header ul li a
+{
+	color: #F0F0F0;
+}
+
+#header ul li a:hover
+{
+	background: #F0F0F0;
+	color: #3A291F;
+}
+
+#header ul li.current_page_item a{
+	background: #F0F0F0;
+	color: #3A291F;
+}
+
+#header #active 
+{ 
+	border-left: 1px solid #F0F0F0; 
+}
+
+/******************* Main Content *******************/
+
+/* Structure */
+.local, h4.related_post_title, #postcomment{
+	height: 26px;
+	line-height: 26px;
+	padding: 0 5px;
+}
+
+#centrecontent
+{
+	overflow: hidden;
+	margin-top:7px;
+}
+
+/* Colour */
+#centrecontent
+{
+	background-color: #FFF;
+}
+
+.local, h4.related_post_title, #postcomment {
+	border-bottom: 1px solid #E8E8CE;
+	border-top: 1px solid #E8E8CE;
+	background-color: #FAFAF0;
+}
+
+/********** Previous and Next by Catagory ***********/
+
+/* Structure */
+#postnavigation
+{	
+	display: inline;
+	float: right;
+	margin: 0px 0px 5px 5px;
+	padding: 0em 0.5em 0em 0.5em;
+}
+
+#postnavigation ul 
+{
+	margin: 0;
+	padding: 0;
+}
+
+#postnavigation li 
+{
+	margin-left: 1.0em;
+}
+
+#postnavigation .navheader  
+{
+	margin-left: 0em;
+}
+
+/* Typography */
+#postnavigation
+{
+	font-size: 0.75em;
+}
+
+#postnavigation .navheader  
+{
+	font-size: 1.25em;
+	font-weight: bolder;
+}
+
+/* Colour and Borders */
+
+#postnavigation
+{
+	border: 1px solid #E8E8CE;
+	background-color: #FAFAF0;
+}
+
+#postnavigation .navheader 
+{
+	color: #9BBB38; 
+	list-style-type: none;
+}
+
+#postnavigation ul 
+{
+	list-style-type: none;
+}
+
+/******************* Left Sidebar *******************/
+
+/* Structure */
+
+#leftsidebar
+{
+	overflow: hidden;
+}
+
+#leftsidebar h2 
+{
+	display: inline;
+	margin: 0.6em 0 0.3em 0;
+	padding: 0 10px 0 0;
+}
+
+#leftsidebar ul 
+{
+	margin: 0.25em 0 0 0;
+	padding: 0;
+}
+
+#leftsidebar ul ul 
+{
+	margin: 0.5em 0;
+}
+
+#leftsidebar ul ul li 
+{
+	padding: 0 0 0 10px;
+}
+
+#leftsidebar ul ul li a 
+{
+	display: block;
+	margin: 0 0 0 -10px;
+	padding: 0em 10px;
+	width: 130px;
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	width: 110px;
+} 
+html>body #leftsidebar ul ul li a 
+{
+	width: 110px;
+}
+
+#leftsidebar ul ul ul 
+{
+	margin: 0;
+}
+
+#leftsidebar ul ul ul li 
+{
+	margin: 0 0 0 -10px;
+	padding: 0 0 0 25px;
+}
+
+#leftsidebar ul ul ul li a 
+{
+	margin: 0 0 0 -25px;
+	padding: 0em 10px 0em 25px;
+	width: 130px;
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	width: 95px;
+} 
+
+html>body #leftsidebar ul ul ul li a 
+{
+	width: 95px;
+}
+
+/* Typography */
+
+#leftsidebar 
+{
+	text-align: left;
+}
+
+#leftsidebar h2 
+{
+	font-size: 1.0em;
+}
+
+#leftsidebar ul 
+{
+	list-style-type: none;
+}
+
+/* Colour and Borders */
+
+#leftsidebar h2 a 
+{
+	color: #9BBB38;
+}
+#leftsidebar h2 a:hover 
+{
+	color: #E58712;
+}
+
+#leftsidebar ul ul 
+{
+	border-top: 1px solid #E8E8CE;
+	background-color: #FAFAF0;
+}
+
+#leftsidebar ul ul li 
+{
+	border-bottom: 1px solid #E8E8CE;
+}
+
+#leftsidebar ul ul li a:hover 
+{
+	background-color: #FFF;
+}
+
+#leftsidebar ul ul ul 
+{
+	border: none;
+}
+#leftsidebar ul ul ul li 
+{
+	border-bottom: none;
+	border-top: 1px solid #E8E8CE;
+}
+
+/****************** Right Sidebar *******************/
+
+/* Structure */
+
+#rightsidebar 
+{
+	overflow: hidden;
+}
+
+#rightsidebar h2 
+{
+	display: inline;
+	margin: 0.6em 0 0.3em 0;
+	padding: 0 10px 0 0;
+}
+
+#rightsidebar ul 
+{
+	margin: 0.25em 0 0 0;
+	padding: 0;
+}
+
+#rightsidebar ul ul 
+{
+	margin: 0.5em 0;
+}
+
+#rightsidebar ul ul li 
+{
+	padding: 0 0 0 10px;
+}
+
+#rightsidebar ul ul li a 
+{
+	display: block;
+	margin: 0 0 0 -10px;
+	padding: 0em 10px;
+	width: 130px;
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	width: 110px;
+} 
+html>body #rightsidebar ul ul li a 
+{
+	width: 110px;
+}
+
+#rightsidebar ul ul ul 
+{
+	margin: 0;
+}
+
+#rightsidebar ul ul ul li 
+{
+	margin: 0 0 0 -10px;
+	padding: 0 0 0 25px;
+}
+
+#rightsidebar ul ul ul li a 
+{
+	margin: 0 0 0 -25px;
+	padding: 0em 10px 0em 25px;
+	width: 130px;
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	width: 95px;
+} 
+
+html>body #rightsidebar ul ul ul li a 
+{
+	width: 95px;
+}
+
+/* Typography */
+
+#rightsidebar 
+{
+	text-align: left;
+}
+
+#rightsidebar h2 
+{
+	font-size: 1.0em;
+}
+
+#rightsidebar ul 
+{
+	list-style-type: none;
+}
+
+/* Colour and Borders */
+
+#rightsidebar h2 a 
+{
+	color: #9BBB38;
+}
+#rightsidebar h2 a:hover 
+{
+	color: #E58712;
+}
+
+#rightsidebar ul ul 
+{
+	border-top: 1px solid #E8E8CE;
+	background-color: #FAFAF0;
+}
+
+#rightsidebar ul ul li 
+{
+	border-bottom: 1px solid #E8E8CE;
+}
+
+#rightsidebar ul ul li a:hover 
+{
+	background-color: #FFF;
+}
+
+#rightsidebar ul ul ul 
+{
+	border: none;
+}
+#rightsidebar ul ul ul li 
+{
+	border-bottom: none;
+	border-top: 1px solid #E8E8CE;
+}
+
+#rightsidebar .avatar_container { margin-top: 5px;}
+#rightsidebar ul li.widget_wp_sidebarlogin, #rightsidebar ul li.widget_wp_sidebarlogin ul ,#rightsidebar ul li.widget_wp_sidebarlogin ul li{
+	border:none;
+}
+
+/********************** Footer **********************/
+
+
+/* Structure */
+
+#footer 
+{
+	clear: both;
+	height:50px;
+}
+
+#footer p 
+{
+	margin: 0;
+	height:50px;
+	line-height: 50px;
+}
+
+/* Typography */
+
+#footer 
+{
+	font-size: 1em;
+	text-align: center;
+}
+
+#footer p 
+{
+	font-size: 1em;
+	text-align: center;
+}
+
+/* Colour and borders */
+
+#footer p 
+{
+	background-color: #E8E8CE;
+	border-top: 3px solid #9BBB38;
+}
+
+/******************* Search Widget ******************/
+
+/* Structure */
+
+#searchform
+{
+	margin: -15px 0px 15px 0px;
+}
+
+#searchform #s
+{
+	width: 130px;
+}
+
+/******************* Thumbs Widget ******************/
+
+/* Structure */
+
+#photopress_randomthumbs
+{
+	width: 100%;
+	margin: 0.5em 0 0 0;
+	padding: 0;
+}
+
+/* Typography */
+
+#photopress_randomthumbs
+{
+	text-align: center;
+}
+
+/***************** Calendar Styles ******************/
+
+/* Structure */
+
+#wp-calendar 
+{
+	margin: 0 0 1.2em 0;
+	width: 130px;
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	width: 128px;	
+} 
+html>body #wp-calendar 
+{
+	width: 128px;
+}
+
+#wp-calendar caption 
+{
+	margin: 1.2em 0 0 0;
+	padding: 0.4em 0;
+}
+
+#wp-calendar td a 
+{
+	display: block;
+	width: 100%;
+}
+
+#wp-calendar td#next, 
+#wp-calendar td#prev 
+{
+	padding: 0.1em 2px;
+}
+
+#wp-calendar td#next a, 
+#wp-calendar td#prev a 
+{
+	display: inline;
+}
+
+/* Typography */
+
+#wp-calendar 
+{
+	font-size: 0.8em;
+	line-height: 1.2em;
+	text-align: center;
+}
+
+#wp-calendar caption 
+{
+	font-weight: bold;
+}
+
+#wp-calendar td#next 
+{
+	text-align: right;
+}
+
+#wp-calendar td#prev 
+{
+	text-align: left;
+}
+
+/* Colour and borders */
+
+#wp-calendar 
+{
+	border: 1px solid #E8E8CE;
+	background: #FAFAF0;
+}
+
+#wp-calendar caption 
+{
+	background: #9BBB38;  
+	color: #FFF;
+}
+
+#wp-calendar td 
+{
+	border: 0;
+	border-collapse: collapse;
+	background: #FFF;
+}
+
+#wp-calendar td.pad 
+{
+	background: transparent;
+}
+
+#wp-calendar td#next, 
+#wp-calendar td#prev 
+{
+	background: transparent;
+}
+
+/********************** Blog ************************/
+
+/* Structure */
+.postentry,
+.postfeedback
+{
+	/*margin-left: 1em;*/
+}
+
+.posttitle 
+{
+	margin-bottom: 0;
+	width: 100%;
+	overflow: auto;
+}
+
+.sinleposttitle {
+	margin-bottom:15px;
+}
+
+.posttitle a 
+{
+	float: left;
+}
+
+.postmeta 
+{
+	margin-top: 0;
+	padding-top: 1px;
+}
+
+.permalink 
+{
+	margin: 0 1.8em 0 0;
+	padding: 0 0 0 14px;
+}
+
+.commentslink,
+.trackbacklink
+{
+	margin: 0 1.8em 0 0;
+	padding: 0 0 0 17px;
+}
+
+/* Typography */
+.posttitle , .posttitle  a {
+	font-size: 14px;
+	font-weight: 100;
+}
+
+.sinleposttitle ,.sinleposttitle  a {
+	font-size:16px;
+	font-weight: bold;
+}
+
+.postmeta 
+{
+	font-size: 1em;
+}
+.postentry {
+	font-size:14px;
+}
+/* Colour and borders */
+
+.posttitle 
+{
+	color: #80904F;
+}
+
+.posttitle a 
+{
+	color: #80904F;
+}
+
+.posttitle a:hover, 
+.posttitle a:active
+{
+	background: #E8E8CE;
+	color: #80904F;
+}
+
+.postmeta 
+{
+	color: #999;
+}
+
+.postmeta .postauthor
+{
+	color: #9BBB38;
+}
+
+.permalink 
+{
+	background: url(images/permalink.gif) no-repeat center left;
+}
+
+.commentslink,
+.trackbacklink
+{
+	background: url(images/commentslink.gif) no-repeat center left;
+}
+
+/******************** Comments **********************/
+
+/* Structure */
+
+#comments
+{
+	float: left;
+	margin: 0em;
+	padding-bottom: 0.5em;
+}
+
+#commentlist 
+{
+	clear:left;
+	margin: 0em;
+	padding: 0;
+}
+
+#commentlist li 
+{
+	padding: 1px 20px 20px 20px;
+}
+
+.comment-author 
+{
+	margin: 0.5em 0em 0em 0em;
+}
+
+.comment-meta 
+{
+	margin-top: 0px;
+}
+
+#comment 
+{
+	width: 98%;
+}
+.comment-author .avatar
+{
+	float:left;
+	margin: 0px 10px 5px 0px;
+}
+
+.reply
+{
+	display: block;
+	margin-top: -1.8em;
+}
+
+#cancel-comment-reply
+{
+	margin-right: 2em;
+}
+
+#respond
+{
+	clear: both;
+	margin-top: 10px;
+}
+
+.navigation-bottom
+{
+	height: 1em;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.navigation-top
+{
+	height: 1em;
+	margin: 0px;
+	padding-top: 1em;
+}
+
+.navigation-bottom p
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.navigation-top p
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/* Typography */
+
+.children,
+#commentlist 
+{
+	list-style-type: none;
+}
+
+.comment-author 
+{
+	font-size: 1.1em;
+	font-family: "Microsoft YaHei","微软雅黑","Lucida Grande", Tahoma, Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.fn
+{
+	font-style: normal;
+}
+
+.comment-meta 
+{
+	font-size: 1em;
+}
+
+.reply
+{
+	font-size: smaller;
+	text-align: right;
+}
+
+/* Colour and borders */
+
+#commentlist 
+{
+	border-bottom: 1px solid #E8E8CE;
+}
+
+#commentlist li 
+{
+	border-top: 1px solid #E8E8CE;
+	background-color: #FFF;
+}
+
+.comment-author 
+{
+	color: #9BBB38;
+}
+
+.alt 
+{
+	background-color: #FAFAF0 !important;
+}
+
+.comment-meta 
+{
+	color: #999;
+}
+
+.bypostauthor
+{
+	background-color: #F0F0F0 !important;
+}
+
+li #respond
+{
+	/*border-top: 1px solid #E8E8CE;*/
+	border-top: 1px solid black;
+}
+
+/********************* Images ***********************/
+p img 
+{
+	padding: 0;
+	max-width: 100%;
+}
+
+/*	
+	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) 
+*/
+	
+.aligncenter,
+div.aligncenter,
+img.centered 
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+img.alignright 
+{
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+img.alignleft 
+{
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+.alignright 
+{
+	float: right;
+}
+	
+.alignleft 
+{
+	float: left
+}
+
+.reallysmallthumbs a img
+{
+	width: 60px;
+	height:60px;
+	float: left;
+	margin: 1px;
+}
+
+/******************* Geo Mashup *********************/
+.locationinfo 
+{
+	overflow:auto;
+	height:195px;
+	width:320px;
+	font-size:70%;
+
+	/* used to allow room for the info window x icon */
+	margin: 0px 10px 0px 0px;
+}
+
+.locationinfo h2 a
+{		
+	margin: 0px;
+}
+
+.locationinfo p
+{		
+	margin: 0px;
+}
+
+.locationinfo img
+{	
+	height:108px;
+	width:auto;
+}
+
+/********************* Sociable *********************/
+.sociable_tagline
+{
+	display: none;
+}
+
+.sociable ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+.sociable
+{
+	margin: 0em 0em -1em 0em;
+}
+
+.sociable li
+{
+	background: none;
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0px 1px 0px 1px;
+}
+
+/***************** Twitter Widget *******************/
+#twitter-list
+{
+	font-size: 1em;
+}
+
+/*************** Vipers Plugins Used ****************/
+/* Structure */
+#viperplugintable
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#viperplugintable td
+{
+	padding: 3px;
+}
+
+/* Typography */
+.pluginrow, 
+.pluginrowalt
+{
+	font-size: 1em;
+}
+
+/* Colour and borders */
+.pluginrowalt
+{
+	background-color: #FAFAF0;
+}
+
+#viperplugintable
+{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#viperplugintable td,
+#viperplugintable th
+{
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+}
+
+/****************** Holly Hacks *********************/
+
+/* holly hacks to fix peekabo bugs in IE */
+
+/* Hides from IE5-mac \*/
+* html li {height: 1%;}
+/* End hide from IE5-mac */
+
+/* Hides from IE5-mac \*/
+* html #postnavigation {width: 145px; height: 2px;}
+/* End hide from IE5-mac */
+
