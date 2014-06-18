@@ -1,1 +1,0 @@
-<p><strong><?php echo __('A fatal, unknown error has occured!', 'ucan-post'); ?></strong></p>
